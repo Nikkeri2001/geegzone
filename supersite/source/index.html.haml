@@ -1,0 +1,31 @@
+
+-title="Eläinlääkäri";
+-name ="Anna Kjällman";
+-phone="050-3574866";
+-email = "anna.kjallman@gmail.com";
+-address = "Jokipuistonkaari 4 A 3, 04130 Sipoo";
+-jobDescription="Kiertävää hevospraktiikkaa ja pieneläinten kotikäyntejä Uudenmaan alueella."
+-contact1="Puhelimella tavoitat parhaiten ma-pe klo 9-16." 
+-contact2="Virka-ajan ulkopuolella tavoitat parhaiten sähköpostilla tai tekstiviestillä."
+
+%head
+%body
+  %header
+
+  .text-container
+    .contact
+      .name #{title} #{name}
+      .phone <span>#{phone}</span>
+      .email #{email}
+      .address #{address}
+   
+  .text-container #{jobDescription}
+    
+  .text-container 
+    #{contact1} 
+    %br 
+    #{contact2}
+ 
+%footer
+  .scale Web design by Nikke
+

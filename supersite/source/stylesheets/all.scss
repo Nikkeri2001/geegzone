@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+@import "compass/css3";
+@import "compass/utilities";
+
+$font-stack: "Trebuchet MS", Helvetica, sans-serif;
+$backgroun-image: "../images/faded-grass.jpg";
+$from-color: rgba(255, 255, 255, 0);
+$to-color: rgba(255, 255, 255, 0.6);
+
+@mixin background-image() {
+  background-image: -webkit-linear-gradient(bottom, $from-color, $to-color), url($backgroun-image); 
+  background-image: moz-linear-gradient(to top, $from-color, $to-color), url($backgroun-image);
+  background-image: ms-linear-gradient(to top, $from-color, $to-color), url($backgroun-image);
+  background-image: o-linear-gradient(to top, $from-color, $to-color), url($backgroun-image);
+  background: linear-gradient(to top, $from-color, $to-color), url($backgroun-image);
+} 
+
+html {
+  height: 100%;
+  background-color: white;
+  background-repeat: no-repeat;
+
+  //@include background(image-url($backgroun-image), linear-gradient(top left, $from-color, $to-color) );
+  @include background-image();
+}
+
+body! {}
+
+.text-container {
+  margin: {
+    left: auto;
+    right: auto;
+    top: 20px;
+    bottom: 20px;
+  }
+
+  border: 2px solid;
+  @include border-radius(15px);
+  background-color: rgba(255, 255, 255, 0.80);
+  width: 60%;
+  
+  padding: {
+    top: 25px;
+    bottom: 25px;
+    right: 25px;
+    left: 25px;
+  }
+  
+  text-align: center;
+   @include box-shadow(green 2px 2px 10px);
+}
+
+.contact {
+  font: 1.5rem $font-stack;
+
+  .address, .email {
+    font: 1rem $font-stack;
+  }
+
+  @media (max-width: 400px)  {
+    font: 1.2rem $font-stack;
+  }
+}
+
+
+footer {
+  clear: both;
+  font: 0.7rem $font-stack;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  
+  .scale:hover {
+    @include transition-duration(2s);
+    @include scale(1.5);
+  }
+  
+}
