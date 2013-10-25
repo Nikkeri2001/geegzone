@@ -1,8 +1,8 @@
 
 -title="Eläinlääkäri";
--name ="Anna Kjällman";
--phone="050-3574866";
--email = "anna.kjallman@gmail.com";
+-name ="Anna&nbsp;Kjällman";
+-phone="050&#8209;3574866";
+-email = "anna<span>.</span>kjallman<span><span>&#64;</span></span>gmail<span>.</span>com";
 -address = "Jokipuistonkaari 4 A 3, 04130 Sipoo";
 -jobDescription="Kiertävää hevospraktiikkaa ja pieneläinten kotikäyntejä Uudenmaan alueella."
 -contact1="Puhelimella tavoitat parhaiten ma-pe klo 9-16." 
@@ -14,8 +14,9 @@
 
   .text-container
     .contact
-      .name #{title} #{name}
-      .phone <span>#{phone}</span>
+      .title-long #{title}
+      .name #{name}
+      .phone #{phone}
       .email #{email}
       .address #{address}
    
@@ -27,5 +28,5 @@
     #{contact2}
  
 %footer
-  .scale Web design by Nikke
+  .scale Web design by Nikke &#169;
 
