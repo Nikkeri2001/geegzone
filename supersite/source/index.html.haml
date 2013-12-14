@@ -10,23 +10,23 @@
 
 %head
 %body
-  %header
-
-  .text-container
-    .contact
-      .title #{title}
-      .name #{name}
-      .phone #{phone}
-      .email #{email}
-      .address #{address}
-   
-  .text-container #{jobDescription}
+  .main-container
+    %header
+    %div.contact-container.text-container
+      .contact
+        .title #{title}       
+        .name #{name}
+        .phone #{phone}
+        .email #{email}
+        .address #{address}
     
-  .text-container 
-    #{contact1} 
-    %br 
-    #{contact2}
+    %div.services-container.text-container #{jobDescription}
+    
+    %div.info-container.text-container
+      #{contact1} 
+      %br
+      #{contact2}
  
-%footer
-  .scale Web design by Nikke &#169;
+    %footer
+      .scale Web design by Nikke &#169;
 

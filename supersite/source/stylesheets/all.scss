@@ -2,57 +2,81 @@
 
 @import "compass/css3";
 @import "compass/utilities";
+@import "bourbon";
+@import "grid-settings";
+@import "neat";
+
 
 $font-stack: "Trebuchet MS", Helvetica, sans-serif;
 $backgroun-image: "../images/faded-grass.jpg";
 $from-color: rgba(255, 255, 255, 0);
 $to-color: rgba(255, 255, 255, 0.6);
 
-@mixin background-image() {
-  background-image: -webkit-linear-gradient(bottom, $from-color, $to-color), url($backgroun-image); 
-  background-image: moz-linear-gradient(to top, $from-color, $to-color), url($backgroun-image);
-  background-image: ms-linear-gradient(to top, $from-color, $to-color), url($backgroun-image);
-  background-image: o-linear-gradient(to top, $from-color, $to-color), url($backgroun-image);
-  background: linear-gradient(to top, $from-color, $to-color), url($backgroun-image);
-} 
-
 html {
   height: 100%;
   background-color: white;
   background-repeat: no-repeat;
 
-  //@include background(image-url($backgroun-image), linear-gradient(top left, $from-color, $to-color) );
-  @include background-image();
+  @include background(image-url($backgroun-image), linear-gradient(top left, $from-color, $to-color) );
 }
 
-body! {}
+body {
+}
+
+.main-container {
+  @include outer-container(); // neat
+}
+
+.contact-container  {
+  @include span-columns(5); // neat
+  @include shift(1); // neat
+  
+  @include media($tablet) {
+    @include span-columns(10 of 12);
+  }
+}
+
+.services-container {
+  @include span-columns(5); // neat
+  @include media($tablet) {
+    @include shift(1);
+    @include span-columns(10 of 12);
+  }
+}
+
+.info-container {
+  @include span-columns(5); // neat
+  @include media($tablet) {
+    @include shift(1);
+    @include span-columns(10 of 12);
+  }
+}
 
 .text-container {
+
+  
   font: $font-stack;
   font-weight: 300;
   line-height: 130%;
 
   margin: {
-    left: auto;
-    right: auto;
-    top: 20px;
-    bottom: 20px;
+    top: 10px;
+    bottom: 10px;
   }
 
   border: 2px solid;
   @include border-radius(15px);
   background-color: rgba(255, 255, 255, 0.80);
-  width: 60%;
   
   padding: {
-    top: 25px;
-    bottom: 25px;
-    right: 25px;
-    left: 25px;
+    top: 20px;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
   }
   
   text-align: center;
-   @include box-shadow(green 2px 2px 10px);
+  @include box-shadow(green 2px 2px 10px);
 }
 
 .contact {
@@ -67,7 +91,8 @@ body! {}
     font-weight: 100;
   }
 
-  @media (max-width: 400px)  {
+  // neat
+  @include media($mobile) {
     font: 1.2rem $font-stack;
   }
 
@@ -75,15 +100,11 @@ body! {}
 
 
 footer {
-  clear: both;
+  clear: both; // full width, no grid
+  
   font: 0.7rem $font-stack;
   text-align: center;
   padding-top: 20px;
   padding-bottom: 10px;
-  
-  .scale:hover {
-    @include transition-duration(2s);
-    @include scale(1.5);
-  }
   
 }
