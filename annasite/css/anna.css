@@ -1,0 +1,71 @@
+body {
+   font-family: 'Lato', serif;
+}
+
+p {
+  padding-top: 10px;
+}
+
+.jumbotron {
+  margin-top: 10px;
+  background-color: #eee; // #C1E6FF;
+  border-radius:5px;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 950px;
+}
+
+.jumbotron h1 {
+  font-size: 43px;
+}
+
+.round-sign {
+  border-radius: 50%;  
+  width: 150px; 
+  height: 150px; 
+  background: #B89470; 
+  text-align: center; 
+  display: table-cell; 
+  overflow: hidden; 
+  vertical-align:middle; 
+  color:white; 
+  font-size: 1.4em;"
+  font-weight: 100;
+}
+
+.rounded-container {
+  background-color: #eee; // #C1E6FF;
+  border-radius:5px;
+}
+
+.page-footer {
+  //color:white; 
+  text-align: center; 
+  background-color: #eee; // #C1E6FF;
+  margin-top: 10px;
+  padding: 0.2em;
+}
+
+/* Extra Small */
+@media(max-width:767px){
+  body {
+    //background-image: url('../DSCF7542.JPG');
+  }
+
+  .jumbotron h1, .jumbotron .h1 {
+    font-size: 33px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .jumbotron {
+     padding: 0.2em;
+     text-align: center; 
+  }
+
+}
