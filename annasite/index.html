@@ -22,6 +22,21 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script> 
+	$(document).ready(function() {
+           var slides = $(".slide-show-container img");
+           var totalSlides = slides.length;
+	   var i = 0;
+
+	   (function slideShow() {
+	      slides.eq(i).fadeIn(1500).delay(15000).fadeOut(1500, function() {
+	         i < totalSlides -1 ? i++ : i = 0;
+	         slideShow();
+	      });
+           })();
+        });
+    </script>
   </head>
   <body>
     <div class="container-fluid theme-showcase" role="main">
@@ -38,8 +53,9 @@
 		   anna.kjallman(at)gmail.com<br>
 	     </h3>
 	  </div>
-	  <div class="col-sm-6 hidden-xs">
-            <img class="img-rounded img-responsive" src="images/from-side2.JPG" alt="Animal" style="box-shadow: 5px 5px 5px 5px #888888;">
+	  <div class="col-sm-6 hidden-xs slide-show-container">
+            <img class="img-rounded img-responsive" src="images/from-side2.JPG" alt="Animal" style="box-shadow: 5px 5px 5px 5px #888888; display:none;">
+            <img class="img-rounded img-responsive" src="images/four-horses2.JPG" alt="Animal" style="box-shadow: 5px 5px 5px 5px #888888; display:none;">
 	  </div>
         </div>
 

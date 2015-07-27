@@ -18,6 +18,10 @@ p {
   max-width: 950px;
 }
 
+.slide-show-container {
+  padding-top: 20px;
+}
+
 .jumbotron h1 {
   font-size: 43px;
 }
