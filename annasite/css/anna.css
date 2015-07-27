@@ -19,7 +19,8 @@ p {
 }
 
 .slide-show-container {
-  padding-top: 20px;
+  /*padding-top: 20px; */
+  min-height: 300px;
 }
 
 .jumbotron h1 {
